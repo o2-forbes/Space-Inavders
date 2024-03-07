@@ -10,13 +10,13 @@ class Player extends GameObject
     this.x + this.width,  this.y + this.height);  // The third point;
   }
 
-  move()
-  {
-    if (keyIsDown(LEFT_ARROW)) {
-        this.x -= 5; // Adjust the speed as needed
-    } else if (keyIsDown(RIGHT_ARROW)) {
-        this.x += 5; // Adjust the speed as needed
+  move() {
+        let speed = 5;
+    
+        if (keyIsDown(RIGHT_ARROW) && this.x + this.width < width) {
+          this.x += speed;
+        } else if (keyIsDown(LEFT_ARROW) && this.x > 0) {
+          this.x -= speed;
+        }
+      }
     }
-  }
-
-}

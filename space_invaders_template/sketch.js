@@ -11,6 +11,7 @@ function setup()
 
 function draw() 
 {
+    player.move();
 
     background(0);
   // Replace gameObject.draw() with our new player.draw();
